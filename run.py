@@ -198,7 +198,7 @@ for desired_cap in desired_cap_list:
             # With Phantom js, we need te set a specific window size to prevent certain tests from failing
             driver.set_window_size(1124, 850)
         else:
-            driver = webdriver.Firefox()
+            driver = webdriver.Firefox(executable_path="driver/geckodriver")
 
     tests_to_run = []
     if(args.test == "all"):
